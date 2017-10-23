@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Fable.Import.ReactMd.ReactEx.fs" />
+
+    <Compile Include="converted/Fable.Helpers.ReactMd.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.Layover.fs" />
+    <Compile Include="converted/Menus/Fable.Helpers.ReactMd.Menu.fs" />
+    <Compile Include="converted/Autocompletes/Fable.Helpers.ReactMd.Autocomplete.fs" />
+    <Compile Include="converted/Avatars/Fable.Helpers.ReactMd.Avatar.fs" />
+    <Compile Include="converted/Badges/Fable.Helpers.ReactMd.Badge.fs" />
+    <Compile Include="converted/BottomNavigations/Fable.Helpers.ReactMd.BottomNavigation.fs" />
+    <Compile Include="converted/Tooltips/Fable.Helpers.ReactMd.injectTooltip.fs" />
+    <Compile Include="converted/Inks/Fable.Helpers.ReactMd.injectInk.fs" />
+    <Compile Include="converted/Buttons/Fable.Helpers.ReactMd.Button.fs" />
+    <Compile Include="converted/Cards/Fable.Helpers.ReactMd.Card.fs" />
+    <Compile Include="converted/Cards/Fable.Helpers.ReactMd.CardActions.fs" />
+    <Compile Include="converted/Cards/Fable.Helpers.ReactMd.CardText.fs" />
+    <Compile Include="converted/Cards/Fable.Helpers.ReactMd.CardTitle.fs" />
+    <Compile Include="converted/Chips/Fable.Helpers.ReactMd.Chip.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.DataTable.fs" />
+    <Compile Include="converted/Menus/Fable.Helpers.ReactMd.DropdownMenu.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.DropdownMenuColumn.fs" />
+    <Compile Include="converted/TextFields/Fable.Helpers.ReactMd.TextField.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.EditDialogColumn.fs" />
+    <Compile Include="converted/Menus/Fable.Helpers.ReactMd.MenuButton.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.MenuButtonColumn.fs" />
+    <Compile Include="converted/SelectFields/Fable.Helpers.ReactMd.SelectField.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.SelectFieldColumn.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TableBody.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TableCardHeader.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TableColumn.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TableFooter.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TableHeader.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TablePagination.fs" />
+    <Compile Include="converted/DataTables/Fable.Helpers.ReactMd.TableRow.fs" />
+    <Compile Include="converted/Dialogs/Fable.Helpers.ReactMd.Dialog.fs" />
+    <Compile Include="converted/Dialogs/Fable.Helpers.ReactMd.DialogContainer.fs" />
+    <Compile Include="converted/Dividers/Fable.Helpers.ReactMd.Divider.fs" />
+    <Compile Include="converted/Drawers/Fable.Helpers.ReactMd.Drawer.fs" />
+    <Compile Include="converted/ExpansionPanels/Fable.Helpers.ReactMd.ExpansionList.fs" />
+    <Compile Include="converted/ExpansionPanels/Fable.Helpers.ReactMd.ExpansionPanel.fs" />
+    <Compile Include="converted/FileInputs/Fable.Helpers.ReactMd.FileInput.fs" />
+    <Compile Include="converted/FileInputs/Fable.Helpers.ReactMd.FileUpload.fs" />
+    <Compile Include="converted/FontIcons/Fable.Helpers.ReactMd.FontIcon.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.AccessibleFakeButton.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.AccessibleFakeInkedButton.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.Collapse.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.FocusContainer.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.IconSeparator.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.Portal.fs" />
+    <Compile Include="converted/Helpers/Fable.Helpers.ReactMd.ResizeObserver.fs" />
+    <Compile Include="converted/Lists/Fable.Helpers.ReactMd.List.fs" />
+    <Compile Include="converted/Lists/Fable.Helpers.ReactMd.ListItem.fs" />
+    <Compile Include="converted/Lists/Fable.Helpers.ReactMd.ListItemControl.fs" />
+    <Compile Include="converted/Media/Fable.Helpers.ReactMd.Media.fs" />
+    <Compile Include="converted/Media/Fable.Helpers.ReactMd.MediaOverlay.fs" />
+    <Compile Include="converted/NavigationDrawers/Fable.Helpers.ReactMd.CloseButton.fs" />
+    <Compile Include="converted/NavigationDrawers/Fable.Helpers.ReactMd.JumpToContentLink.fs" />
+    <Compile Include="converted/NavigationDrawers/Fable.Helpers.ReactMd.NavigationDrawer.fs" />
+    <Compile Include="converted/Papers/Fable.Helpers.ReactMd.Paper.fs" />
+    <Compile Include="converted/Pickers/Fable.Helpers.ReactMd.Pickers.fs" />
+    <Compile Include="converted/Pickers/Fable.Helpers.ReactMd.DatePickerContainer.fs" />
+    <Compile Include="converted/Pickers/Fable.Helpers.ReactMd.TimePickerContainer.fs" />
+    <Compile Include="converted/Progress/Fable.Helpers.ReactMd.Progress.fs" />
+    <Compile Include="converted/Progress/Fable.Helpers.ReactMd.CircularProgress.fs" />
+    <Compile Include="converted/Progress/Fable.Helpers.ReactMd.LinearProgress.fs" />
+    <Compile Include="converted/SelectionControls/Fable.Helpers.ReactMd.SelectionControl.fs" />
+    <Compile Include="converted/SelectionControls/Fable.Helpers.ReactMd.Checkbox.fs" />
+    <Compile Include="converted/SelectionControls/Fable.Helpers.ReactMd.Radio.fs" />
+    <Compile Include="converted/SelectionControls/Fable.Helpers.ReactMd.SelectionControlGroup.fs" />
+    <Compile Include="converted/SelectionControls/Fable.Helpers.ReactMd.Switch.fs" />
+    <Compile Include="converted/Sliders/Fable.Helpers.ReactMd.Slider.fs" />
+    <Compile Include="converted/Snackbars/Fable.Helpers.ReactMd.SnackbarContainer.fs" />
+    <Compile Include="converted/Subheaders/Fable.Helpers.ReactMd.Subheader.fs" />
+    <Compile Include="converted/SVGIcons/Fable.Helpers.ReactMd.SVGIcon.fs" />
+    <Compile Include="converted/Tabs/Fable.Helpers.ReactMd.Tab.fs" />
+    <Compile Include="converted/Tabs/Fable.Helpers.ReactMd.MenuTab.fs" />
+    <Compile Include="converted/Tabs/Fable.Helpers.ReactMd.TabPanel.fs" />
+    <Compile Include="converted/Tabs/Fable.Helpers.ReactMd.Tabs.fs" />
+    <Compile Include="converted/Tabs/Fable.Helpers.ReactMd.TabsContainer.fs" />
+    <Compile Include="converted/Toolbars/Fable.Helpers.ReactMd.Toolbar.fs" />
+    <Compile Include="converted/Tooltips/Fable.Helpers.ReactMd.Tooltipped.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fable.Core" Version="1.2.4" />
+    <PackageReference Include="Fable.Import.Browser" Version="0.1.0" />
+    <PackageReference Include="Fable.Import.Electron" Version="0.1.1" />
+    <PackageReference Include="Fable.Import.Node" Version="0.1.5" />
+    <PackageReference Include="Fable.PowerPack" Version="1.2.0" />
+    <PackageReference Include="Fable.React" Version="1.2.1" />
+  </ItemGroup>
+  <Import Project=".paket\Paket.Restore.targets" />
+</Project>

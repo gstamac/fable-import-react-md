@@ -1,0 +1,29 @@
+{
+    "importNamespace": "Fable.Helpers.ReactMd",
+    "skipAllowNullLiteral": true,
+    "createReactHelpersFor": "react-md",
+    "mappedTypes": {
+        "Event": "React.FormEvent",
+        "React.ReactElement<obj>": "React.ReactElement",
+        "React.ReactHTMLElement<obj>": "React.ReactHTMLElement",
+        
+        "React.ReactElement<Tabs>": "React.ReactElement",
+        "React.ReactElement<Tab>": "React.ReactElement",
+        
+        "React.MouseEvent<HTMLElement>": "React.MouseEvent",
+        "React.MouseEvent<HTMLTableRowElement>": "React.MouseEvent",
+        "React.DragEvent<HTMLElement>": "React.DragEvent",
+        "React.TouchEvent<HTMLElement>": "React.TouchEvent",
+        "React.KeyboardEvent<HTMLElement>": "React.KeyboardEvent",
+        "React.FocusEvent<HTMLElement>": "React.FocusEvent",
+        "React.ClipboardEvent<HTMLElement>": "React.ClipboardEvent",
+        "React.FormEvent<HTMLElement>": "React.FormEvent",
+        "React.FormEvent<HTMLFormElement>": "React.FormEvent",
+        
+        "DataType": "ResizeArray<obj>",
+        "IdPropType": "string",
+
+        "React.ComponentType<obj>": "ReactEx.ComponentType<obj>"
+    },
+    "typeCacheFile": "type-cache.json"
+}
