@@ -52,7 +52,7 @@ type SnackbarProp =
     | OnBlur of (React.FocusEvent -> unit) // BaseProps
     | OnClick of (React.MouseEvent -> unit) // Props
     | Id of string 
-    | Toasts of ResizeArray<obj> 
+    | [<CompiledName("toasts")>] ToastsA of ResizeArray<obj> 
     | OnDismiss of Function 
     | Autohide of bool 
     | AutohideTimeout of float 
@@ -64,6 +64,7 @@ type SnackbarProp =
     | RenderNode of obj 
     | LastChild of bool 
     interface ISnackbarProp
+    static member Toasts (l: obj list) = ToastsA (l |> ResizeArray<obj>) 
 
 module Snackbar =
     [<Import("Snackbar", from="react-md")>]

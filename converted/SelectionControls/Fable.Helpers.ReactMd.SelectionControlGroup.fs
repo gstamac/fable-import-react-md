@@ -66,9 +66,10 @@ type SelectionControlGroupProp =
     | Name of U2<string, float> 
     | DefaultValue of U2<float, string> 
     | Value of U2<float, string> 
-    | Controls of ResizeArray<obj> 
+    | [<CompiledName("controls")>] ControlsA of ResizeArray<obj> 
     | Disabled of bool 
     interface ISelectionControlGroupProp
+    static member Controls (l: obj list) = ControlsA (l |> ResizeArray<obj>) 
 
 module SelectionControlGroup =
     [<Import("SelectionControlGroup", from="react-md")>]

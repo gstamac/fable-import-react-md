@@ -46,6 +46,7 @@ type MediaOverlayProp =
     | Component of React.ReactType 
     interface IMediaOverlayProp
 
+
 module MediaOverlay =
     [<Import("MediaOverlay", from="react-md")>]
     let MediaOverlayComp: React.ComponentClass<IMediaOverlayProp> = jsNative 

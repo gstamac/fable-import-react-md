@@ -51,6 +51,7 @@ type TableRowProp =
     | AutoAdjust of bool 
     interface ITableRowProp
 
+
 module TableRow =
     [<Import("TableRow", from="react-md")>]
     let TableRowComp: React.ComponentClass<ITableRowProp> = jsNative 

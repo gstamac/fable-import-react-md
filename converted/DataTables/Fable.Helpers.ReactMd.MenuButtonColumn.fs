@@ -128,7 +128,7 @@ type MenuButtonColumnProp =
     | InkTransitionEnterTimeout of float // InjectedInkProps
     | InkTransitionLeaveTimeout of float // InjectedInkProps
     | WaitForInkTransition of bool // InjectedInkProps
-    | DisabledInteractions of ResizeArray<InteractionTypes> // InjectedInkProps
+    | [<CompiledName("disabledInteractions")>] DisabledInteractionsA of ResizeArray<InteractionTypes> // InjectedInkProps
     | Children of React.ReactNode // MenuButtonProps
     | SimplifiedMenu of bool // MenuButtonProps
     | ButtonChildren of React.ReactNode // MenuButtonProps
@@ -141,6 +141,7 @@ type MenuButtonColumnProp =
     | TooltipDelay of float 
     | TooltipPosition of Positions 
     interface IMenuButtonColumnProp
+    static member DisabledInteractions (l: InteractionTypes list) = DisabledInteractionsA (l |> ResizeArray<InteractionTypes>) // InjectedInkProps
 
 module MenuButtonColumn =
     [<Import("MenuButtonColumn", from="react-md")>]

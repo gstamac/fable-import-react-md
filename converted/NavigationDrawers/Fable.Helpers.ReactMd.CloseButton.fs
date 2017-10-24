@@ -42,6 +42,7 @@ type CloseButtonProp =
     | OnClick of (React.MouseEvent -> unit) // Props
     interface ICloseButtonProp
 
+
 module CloseButton =
     [<Import("CloseButton", from="react-md")>]
     let CloseButtonComp: React.ComponentClass<ICloseButtonProp> = jsNative 

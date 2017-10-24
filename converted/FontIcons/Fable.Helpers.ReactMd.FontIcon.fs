@@ -59,6 +59,7 @@ type FontIconProp =
     | ForceFontSize of bool 
     interface IFontIconProp
 
+
 module FontIcon =
     [<Import("FontIcon", from="react-md")>]
     let FontIconComp: React.ComponentClass<IFontIconProp> = jsNative 

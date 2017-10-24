@@ -59,13 +59,14 @@ type AvatarProp =
     | Icon of React.ReactNode 
     | Children of React.ReactNode 
     | Random of bool 
-    | Suffixes of ResizeArray<string> 
+    | [<CompiledName("suffixes")>] SuffixesA of ResizeArray<string> 
     | Suffix of string 
     | IconSized of bool 
     | Role of Role 
     | ContentStyle of React.CSSProperties 
     | ContentClassName of string 
     interface IAvatarProp
+    static member Suffixes (l: string list) = SuffixesA (l |> ResizeArray<string>) 
 
 module Avatar =
     [<Import("Avatar", from="react-md")>]

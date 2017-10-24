@@ -113,7 +113,7 @@ type ListItemProp =
     | InkTransitionEnterTimeout of float // InjectedInkProps
     | InkTransitionLeaveTimeout of float // InjectedInkProps
     | WaitForInkTransition of bool // InjectedInkProps
-    | DisabledInteractions of ResizeArray<InteractionTypes> // InjectedInkProps
+    | [<CompiledName("disabledInteractions")>] DisabledInteractionsA of ResizeArray<InteractionTypes> // InjectedInkProps
     | ContentStyle of React.CSSProperties 
     | ContentClassName of string 
     | LeftNodeStyle of React.CSSProperties 
@@ -134,7 +134,7 @@ type ListItemProp =
     | Component of React.ReactType 
     | ItemComponent of React.ReactType 
     | ItemProps of obj 
-    | NestedItems of ResizeArray<React.ReactNode> 
+    | [<CompiledName("nestedItems")>] NestedItemsA of ResizeArray<React.ReactNode> 
     | DefaultVisible of bool 
     | Visible of bool 
     | ExpanderIcon of React.ReactElement 
@@ -148,6 +148,8 @@ type ListItemProp =
     | ExpanderIconChildren of React.ReactNode 
     | ExpanderIconClassName of string 
     interface IListItemProp
+    static member DisabledInteractions (l: InteractionTypes list) = DisabledInteractionsA (l |> ResizeArray<InteractionTypes>) // InjectedInkProps
+    static member NestedItems (l: React.ReactNode list) = NestedItemsA (l |> ResizeArray<React.ReactNode>) 
 
 module ListItem =
     [<Import("ListItem", from="react-md")>]

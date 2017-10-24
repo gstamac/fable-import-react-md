@@ -54,6 +54,7 @@ type IconSeparatorProp =
     | Component of React.ReactType 
     interface IIconSeparatorProp
 
+
 module IconSeparator =
     [<Import("IconSeparator", from="react-md")>]
     let IconSeparatorComp: React.ComponentClass<IIconSeparatorProp> = jsNative 

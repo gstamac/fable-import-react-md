@@ -49,11 +49,12 @@ type MenuTabProp =
     | Id of string 
     | ActiveTabIndex of float 
     | OverflowAtIndex of float 
-    | Tabs of ResizeArray<U3<React.ReactElement, string, obj>> 
+    | [<CompiledName("tabs")>] TabsA of ResizeArray<U3<React.ReactElement, string, obj>> 
     | TabStyle of React.CSSProperties 
     | TabClassName of string 
     | Label of React.ReactNode 
     interface IMenuTabProp
+    static member Tabs (l: U3<React.ReactElement, string, obj> list) = TabsA (l |> ResizeArray<U3<React.ReactElement, string, obj>>) 
 
 module MenuTab =
     [<Import("MenuTab", from="react-md")>]

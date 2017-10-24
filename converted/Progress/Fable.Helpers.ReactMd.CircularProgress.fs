@@ -48,6 +48,7 @@ type CircularProgressProp =
     | DeterminateDashoffset of float 
     interface ICircularProgressProp
 
+
 module CircularProgress =
     [<Import("CircularProgress", from="react-md")>]
     let CircularProgressComp: React.ComponentClass<ICircularProgressProp> = jsNative 

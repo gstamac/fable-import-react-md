@@ -72,6 +72,7 @@ type TableCardHeaderProp =
     | Visible of bool 
     interface ITableCardHeaderProp
 
+
 module TableCardHeader =
     [<Import("TableCardHeader", from="react-md")>]
     let TableCardHeaderComp: React.ComponentClass<ITableCardHeaderProp> = jsNative 

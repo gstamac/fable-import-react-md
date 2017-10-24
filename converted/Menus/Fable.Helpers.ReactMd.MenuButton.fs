@@ -132,7 +132,7 @@ type MenuButtonProp =
     | InkTransitionEnterTimeout of float // InjectedInkProps
     | InkTransitionLeaveTimeout of float // InjectedInkProps
     | WaitForInkTransition of bool // InjectedInkProps
-    | DisabledInteractions of ResizeArray<InteractionTypes> // InjectedInkProps
+    | [<CompiledName("disabledInteractions")>] DisabledInteractionsA of ResizeArray<InteractionTypes> // InjectedInkProps
     | Children of React.ReactNode 
     | SimplifiedMenu of bool 
     | ButtonChildren of React.ReactNode 
@@ -140,6 +140,7 @@ type MenuButtonProp =
     | IsOpen of bool 
     | DefaultOpen of bool 
     interface IMenuButtonProp
+    static member DisabledInteractions (l: InteractionTypes list) = DisabledInteractionsA (l |> ResizeArray<InteractionTypes>) // InjectedInkProps
 
 module MenuButton =
     [<Import("MenuButton", from="react-md")>]

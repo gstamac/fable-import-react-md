@@ -23,6 +23,8 @@
         "DataType": "ResizeArray<obj>",
         "IdPropType": "string",
 
+        "U2<React.ReactElement, obj>": "obj",
+
         "React.ComponentType<obj>": "ReactEx.ComponentType<obj>"
     },
     "typeCacheFile": "type-cache.json"

@@ -90,7 +90,7 @@ type ExpansionPanelProp =
     | DefaultExpanded of bool 
     | ExpanderIcon of React.ReactElement 
     | Focused of bool 
-    | ColumnWidths of ResizeArray<float> 
+    | [<CompiledName("columnWidths")>] ColumnWidthsA of ResizeArray<float> 
     | OnExpandToggle of (bool -> unit) 
     | OnSave of (React.MouseEvent -> unit) 
     | OnCancel of (React.MouseEvent -> unit) 
@@ -113,6 +113,7 @@ type ExpansionPanelProp =
     | ExpandIconChildren of React.ReactNode 
     | ExpandIconClassName of string 
     interface IExpansionPanelProp
+    static member ColumnWidths (l: float list) = ColumnWidthsA (l |> ResizeArray<float>) 
 
 module ExpansionPanel =
     [<Import("ExpansionPanel", from="react-md")>]

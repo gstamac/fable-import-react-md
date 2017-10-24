@@ -132,7 +132,7 @@ type AutocompleteProp =
     | DataLabel of string 
     | DataValue of string 
     | DeleteKeys of U2<string, ResizeArray<string>> 
-    | Data of ResizeArray<obj> 
+    | [<CompiledName("data")>] DataA of ResizeArray<obj> 
     | Total of float 
     | Offset of float 
     | Filter of (ResizeArray<obj> -> U2<string, float> -> string -> ResizeArray<string>) 
@@ -150,6 +150,7 @@ type AutocompleteProp =
     | Position of LayoverPositions 
     | SimplifiedMenu of bool 
     interface IAutocompleteProp
+    static member Data (l: obj list) = DataA (l |> ResizeArray<obj>) 
 
 module Autocomplete =
     [<Import("Autocomplete", from="react-md")>]

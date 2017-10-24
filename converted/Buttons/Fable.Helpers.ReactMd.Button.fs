@@ -122,12 +122,13 @@ type ButtonProp =
     | InkTransitionEnterTimeout of float // InjectedInkProps
     | InkTransitionLeaveTimeout of float // InjectedInkProps
     | WaitForInkTransition of bool // InjectedInkProps
-    | DisabledInteractions of ResizeArray<InteractionTypes> // InjectedInkProps
+    | [<CompiledName("disabledInteractions")>] DisabledInteractionsA of ResizeArray<InteractionTypes> // InjectedInkProps
     | Children of React.ReactNode 
     | Component of React.ReactType 
     | Fixed of bool 
     | FixedPosition of FixedPositions 
     interface IButtonProp
+    static member DisabledInteractions (l: InteractionTypes list) = DisabledInteractionsA (l |> ResizeArray<InteractionTypes>) // InjectedInkProps
 
 module Button =
     [<Import("Button", from="react-md")>]

@@ -32,7 +32,7 @@ type DrawerProps =
     abstract overlayStyle: React.CSSProperties option with get, set
     abstract overlayClassName: string option with get, set
     abstract ``component``: React.ReactType option with get, set
-    abstract navItems: ResizeArray<U2<React.ReactElement, obj>> option with get, set
+    abstract navItems: ResizeArray<obj> option with get, set
     abstract autoclose: bool option with get, set
     abstract header: React.ReactNode option with get, set
     abstract mobileType: MobileDrawerType option with get, set
@@ -98,7 +98,7 @@ type DrawerProp =
     | OverlayStyle of React.CSSProperties 
     | OverlayClassName of string 
     | Component of React.ReactType 
-    | NavItems of ResizeArray<U2<React.ReactElement, obj>> 
+    | [<CompiledName("navItems")>] NavItemsA of ResizeArray<obj> 
     | Autoclose of bool 
     | Header of React.ReactNode 
     | MobileType of MobileDrawerType 
@@ -125,6 +125,7 @@ type DrawerProp =
     | ConstantType of bool 
     | OnVisibilityToggle of (bool -> React.MouseEvent -> unit) 
     interface IDrawerProp
+    static member NavItems (l: obj list) = NavItemsA (l |> ResizeArray<obj>) 
 
 module Drawer =
     [<Import("Drawer", from="react-md")>]

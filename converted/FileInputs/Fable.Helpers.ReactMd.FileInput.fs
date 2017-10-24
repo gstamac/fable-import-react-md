@@ -81,6 +81,7 @@ type FileInputProp =
     | IconClassName of string 
     interface IFileInputProp
 
+
 module FileInput =
     [<Import("FileInput", from="react-md")>]
     let FileInputComp: React.ComponentClass<IFileInputProp> = jsNative 

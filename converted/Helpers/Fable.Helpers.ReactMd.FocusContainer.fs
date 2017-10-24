@@ -50,9 +50,10 @@ type FocusContainerProp =
     | Children of React.ReactNode 
     | InitialFocus of string 
     | FocusOnMount of bool 
-    | AdditionalFocusKeys of ResizeArray<float> 
+    | [<CompiledName("additionalFocusKeys")>] AdditionalFocusKeysA of ResizeArray<float> 
     | ContainFocus of bool 
     interface IFocusContainerProp
+    static member AdditionalFocusKeys (l: float list) = AdditionalFocusKeysA (l |> ResizeArray<float>) 
 
 module FocusContainer =
     [<Import("FocusContainer", from="react-md")>]

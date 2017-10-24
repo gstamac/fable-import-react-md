@@ -53,6 +53,7 @@ type LinearProgressProp =
     | Query of bool 
     interface ILinearProgressProp
 
+
 module LinearProgress =
     [<Import("LinearProgress", from="react-md")>]
     let LinearProgressComp: React.ComponentClass<ILinearProgressProp> = jsNative 

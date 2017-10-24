@@ -83,7 +83,7 @@ type DialogProp =
     | Children of React.ReactNode 
     | InitialFocus of string 
     | FocusOnMount of bool 
-    | AdditionalFocusKeys of ResizeArray<float> 
+    | [<CompiledName("additionalFocusKeys")>] AdditionalFocusKeysA of ResizeArray<float> 
     | ContainFocus of bool 
     | FullPage of bool 
     | Title of React.ReactNode 
@@ -92,6 +92,7 @@ type DialogProp =
     | Width of float 
     | StackedActions of bool 
     interface IDialogProp
+    static member AdditionalFocusKeys (l: float list) = AdditionalFocusKeysA (l |> ResizeArray<float>) 
 
 module Dialog =
     [<Import("Dialog", from="react-md")>]

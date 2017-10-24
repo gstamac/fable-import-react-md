@@ -86,6 +86,7 @@ type TabsProp =
     | OverflowMenuIconClassName of string 
     interface ITabsProp
 
+
 module Tabs =
     [<Import("Tabs", from="react-md")>]
     let TabsComp: React.ComponentClass<ITabsProp> = jsNative 

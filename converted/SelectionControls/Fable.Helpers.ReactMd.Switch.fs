@@ -54,6 +54,7 @@ type SwitchProp =
     | OnChange of (bool -> React.FormEvent -> unit) 
     interface ISwitchProp
 
+
 module Switch =
     [<Import("Switch", from="react-md")>]
     let SwitchComp: React.ComponentClass<ISwitchProp> = jsNative 

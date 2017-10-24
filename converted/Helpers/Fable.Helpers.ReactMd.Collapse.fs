@@ -51,6 +51,7 @@ type CollapseProp =
     | Animate of bool 
     interface ICollapseProp
 
+
 module Collapse =
     [<Import("Collapse", from="react-md")>]
     let CollapseComp: React.ComponentClass<ICollapseProp> = jsNative 

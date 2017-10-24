@@ -74,7 +74,7 @@ type DialogContainerProp =
     | Children of React.ReactNode // DialogProps
     | InitialFocus of string // DialogProps
     | FocusOnMount of bool // DialogProps
-    | AdditionalFocusKeys of ResizeArray<float> // DialogProps
+    | [<CompiledName("additionalFocusKeys")>] AdditionalFocusKeysA of ResizeArray<float> // DialogProps
     | ContainFocus of bool // DialogProps
     | FullPage of bool // DialogProps
     | Title of React.ReactNode // DialogProps
@@ -99,6 +99,7 @@ type DialogContainerProp =
     | LastChild of bool 
     | DefaultVisibleTransitionable of bool 
     interface IDialogContainerProp
+    static member AdditionalFocusKeys (l: float list) = AdditionalFocusKeysA (l |> ResizeArray<float>) // DialogProps
 
 module DialogContainer =
     [<Import("DialogContainer", from="react-md")>]

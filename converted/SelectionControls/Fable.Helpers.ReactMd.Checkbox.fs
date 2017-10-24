@@ -66,6 +66,7 @@ type CheckboxProp =
     | UncheckedIconClassName of string 
     interface ICheckboxProp
 
+
 module Checkbox =
     [<Import("Checkbox", from="react-md")>]
     let CheckboxComp: React.ComponentClass<ICheckboxProp> = jsNative 

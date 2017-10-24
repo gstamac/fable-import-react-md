@@ -55,7 +55,7 @@ type BottomNavigationProp =
     | OnFocus of (React.FocusEvent -> unit) // BaseProps
     | OnBlur of (React.FocusEvent -> unit) // BaseProps
     | OnClick of (React.MouseEvent -> unit) // Props
-    | Links of ResizeArray<obj> 
+    | [<CompiledName("links")>] LinksA of ResizeArray<obj> 
     | Colored of bool 
     | Dynamic of bool 
     | DynamicThreshold of float 
@@ -71,6 +71,7 @@ type BottomNavigationProp =
     | Animate of bool 
     | Portal of bool 
     interface IBottomNavigationProp
+    static member Links (l: obj list) = LinksA (l |> ResizeArray<obj>) 
 
 module BottomNavigation =
     [<Import("BottomNavigation", from="react-md")>]

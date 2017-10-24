@@ -47,6 +47,7 @@ type DividerProp =
     | Children of React.ReactNode 
     interface IDividerProp
 
+
 module Divider =
     [<Import("Divider", from="react-md")>]
     let DividerComp: React.ComponentClass<IDividerProp> = jsNative 

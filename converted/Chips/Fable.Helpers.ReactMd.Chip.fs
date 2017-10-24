@@ -57,6 +57,7 @@ type ChipProp =
     | IconClassName of string 
     interface IChipProp
 
+
 module Chip =
     [<Import("Chip", from="react-md")>]
     let ChipComp: React.ComponentClass<IChipProp> = jsNative 

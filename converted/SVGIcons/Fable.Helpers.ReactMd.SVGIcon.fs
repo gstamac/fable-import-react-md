@@ -71,6 +71,7 @@ type SVGIconProp =
     | Xmlns of string 
     interface ISVGIconProp
 
+
 module SVGIcon =
     [<Import("SVGIcon", from="react-md")>]
     let SVGIconComp: React.ComponentClass<ISVGIconProp> = jsNative 

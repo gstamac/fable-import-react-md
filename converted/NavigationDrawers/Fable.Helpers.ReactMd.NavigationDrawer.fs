@@ -27,7 +27,7 @@ type NavigationDrawerProps =
     abstract drawerTitle: React.ReactNode option with get, set
     abstract drawerChildren: React.ReactNode option with get, set
     abstract position: DrawerPosition option with get, set
-    abstract navItems: ResizeArray<U2<React.ReactElement, obj>> option with get, set
+    abstract navItems: ResizeArray<obj> option with get, set
     abstract mobileDrawerType: MobileDrawerType option with get, set
     abstract tabletDrawerType: DrawerType option with get, set
     abstract desktopDrawerType: DrawerType option with get, set
@@ -123,7 +123,7 @@ type NavigationDrawerProp =
     | DrawerTitle of React.ReactNode 
     | DrawerChildren of React.ReactNode 
     | Position of DrawerPosition 
-    | NavItems of ResizeArray<U2<React.ReactElement, obj>> 
+    | [<CompiledName("navItems")>] NavItemsA of ResizeArray<obj> 
     | MobileDrawerType of MobileDrawerType 
     | TabletDrawerType of DrawerType 
     | DesktopDrawerType of DrawerType 
@@ -169,6 +169,7 @@ type NavigationDrawerProp =
     | PersistentIconChildren of React.ReactNode 
     | PersistentIconClassName of string 
     interface INavigationDrawerProp
+    static member NavItems (l: obj list) = NavItemsA (l |> ResizeArray<obj>) 
 
 module NavigationDrawer =
     [<Import("NavigationDrawer", from="react-md")>]

@@ -48,6 +48,7 @@ type CardTextProp =
     | Children of React.ReactNode 
     interface ICardTextProp
 
+
 module CardText =
     [<Import("CardText", from="react-md")>]
     let CardTextComp: React.ComponentClass<ICardTextProp> = jsNative 

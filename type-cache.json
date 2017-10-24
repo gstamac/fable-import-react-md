@@ -4642,7 +4642,7 @@
             },
             {
                 "name": "navItems",
-                "type": "ResizeArray<U2<React.ReactElement, obj>>",
+                "type": "ResizeArray<obj>",
                 "optional": true,
                 "static": false
             },
@@ -6451,7 +6451,7 @@
             },
             {
                 "name": "navItems",
-                "type": "ResizeArray<U2<React.ReactElement, obj>>",
+                "type": "ResizeArray<obj>",
                 "optional": true,
                 "static": false
             },

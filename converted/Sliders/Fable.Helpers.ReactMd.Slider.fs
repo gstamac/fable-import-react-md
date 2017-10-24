@@ -95,6 +95,7 @@ type SliderProp =
     | ValuePrecision of float 
     interface ISliderProp
 
+
 module Slider =
     [<Import("Slider", from="react-md")>]
     let SliderComp: React.ComponentClass<ISliderProp> = jsNative 

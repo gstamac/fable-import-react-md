@@ -43,6 +43,7 @@ type TableHeaderProp =
     | Children of React.ReactElement 
     interface ITableHeaderProp
 
+
 module TableHeader =
     [<Import("TableHeader", from="react-md")>]
     let TableHeaderComp: React.ComponentClass<ITableHeaderProp> = jsNative 

@@ -30,6 +30,7 @@ type ResizeObserverProp =
     | OnResize of (ResizeParams -> unit) 
     interface IResizeObserverProp
 
+
 module ResizeObserver =
     [<Import("ResizeObserver", from="react-md")>]
     let ResizeObserverComp: React.ComponentClass<IResizeObserverProp> = jsNative 

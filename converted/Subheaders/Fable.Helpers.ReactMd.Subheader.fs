@@ -52,6 +52,7 @@ type SubheaderProp =
     | Component of React.ReactType 
     interface ISubheaderProp
 
+
 module Subheader =
     [<Import("Subheader", from="react-md")>]
     let SubheaderComp: React.ComponentClass<ISubheaderProp> = jsNative 

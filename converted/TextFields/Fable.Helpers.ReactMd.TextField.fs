@@ -147,6 +147,7 @@ type TextFieldProp =
     | AdjustMinWidth of bool 
     interface ITextFieldProp
 
+
 module TextField =
     [<Import("TextField", from="react-md")>]
     let TextFieldComp: TextFieldComponent = jsNative 

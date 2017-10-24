@@ -129,7 +129,7 @@ type SelectFieldColumnProp =
     | DefaultVisible of bool // SharedSelectFieldProps
     | Visible of bool // SharedSelectFieldProps
     | OnVisibilityChange of (bool -> React.MouseEvent -> unit) // SharedSelectFieldProps
-    | MenuItems of ResizeArray<U4<float, string, obj, React.ReactElement>> // SharedSelectFieldProps
+    | [<CompiledName("menuItems")>] MenuItemsA of ResizeArray<U4<float, string, obj, React.ReactElement>> // SharedSelectFieldProps
     | KeyboardMatchingTimeout of float // SharedSelectFieldProps
     | ItemLabel of string // SharedSelectFieldProps
     | ItemValue of string // SharedSelectFieldProps
@@ -165,6 +165,7 @@ type SelectFieldColumnProp =
     | WrapperStyle of React.CSSProperties 
     | WrapperClassName of string 
     interface ISelectFieldColumnProp
+    static member MenuItems (l: U4<float, string, obj, React.ReactElement> list) = MenuItemsA (l |> ResizeArray<U4<float, string, obj, React.ReactElement>>) // SharedSelectFieldProps
 
 module SelectFieldColumn =
     [<Import("SelectFieldColumn", from="react-md")>]

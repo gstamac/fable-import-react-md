@@ -191,6 +191,7 @@ type EditDialogColumnProp =
     | NoIcon of bool 
     interface IEditDialogColumnProp
 
+
 module EditDialogColumn =
     [<Import("EditDialogColumn", from="react-md")>]
     let EditDialogColumnComp: React.ComponentClass<IEditDialogColumnProp> = jsNative 

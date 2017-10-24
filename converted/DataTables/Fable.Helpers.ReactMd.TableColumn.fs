@@ -85,6 +85,7 @@ type TableColumnProp =
     | SortIconClassName of string 
     interface ITableColumnProp
 
+
 module TableColumn =
     [<Import("TableColumn", from="react-md")>]
     let TableColumnComp: React.ComponentClass<ITableColumnProp> = jsNative 

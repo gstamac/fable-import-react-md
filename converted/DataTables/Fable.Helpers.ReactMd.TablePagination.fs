@@ -74,7 +74,7 @@ type TablePaginationProp =
     | DefaultPage of float 
     | DefaultRowsPerPage of float 
     | RowsPerPageLabel of React.ReactNode 
-    | RowsPerPageItems of ResizeArray<float> 
+    | [<CompiledName("rowsPerPageItems")>] RowsPerPageItemsA of ResizeArray<float> 
     | Rows of float 
     | IncrementIcon of React.ReactElement 
     | DecrementIcon of React.ReactElement 
@@ -84,6 +84,7 @@ type TablePaginationProp =
     | DecrementIconChildren of React.ReactNode 
     | DecrementIconClassName of string 
     interface ITablePaginationProp
+    static member RowsPerPageItems (l: float list) = RowsPerPageItemsA (l |> ResizeArray<float>) 
 
 module TablePagination =
     [<Import("TablePagination", from="react-md")>]

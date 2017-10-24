@@ -43,6 +43,7 @@ type TableFooterProp =
     | Children of React.ReactElement 
     interface ITableFooterProp
 
+
 module TableFooter =
     [<Import("TableFooter", from="react-md")>]
     let TableFooterComp: React.ComponentClass<ITableFooterProp> = jsNative 

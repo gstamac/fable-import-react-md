@@ -66,6 +66,7 @@ type BadgeProp =
     | InvisibleOnZero of bool 
     interface IBadgeProp
 
+
 module Badge =
     [<Import("Badge", from="react-md")>]
     let BadgeComp: React.ComponentClass<IBadgeProp> = jsNative 

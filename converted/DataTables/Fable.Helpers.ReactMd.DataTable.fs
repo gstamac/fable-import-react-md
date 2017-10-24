@@ -82,7 +82,7 @@ type DataTableProp =
     | FixedScrollWrapperStyle of React.CSSProperties 
     | FixedScrollWrapperClassName of string 
     | BaseId of string 
-    | DefaultSelectedRows of ResizeArray<bool> 
+    | [<CompiledName("defaultSelectedRows")>] DefaultSelectedRowsA of ResizeArray<bool> 
     | Responsive of bool 
     | Plain of bool 
     | OnRowToggle of (float -> bool -> React.MouseEvent -> unit) 
@@ -109,6 +109,7 @@ type DataTableProp =
     | IndeterminateIconChildren of React.ReactNode 
     | IndeterminateIconClassName of string 
     interface IDataTableProp
+    static member DefaultSelectedRows (l: bool list) = DefaultSelectedRowsA (l |> ResizeArray<bool>) 
 
 module DataTable =
     [<Import("DataTable", from="react-md")>]
