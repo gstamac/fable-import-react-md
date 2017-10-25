@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 [<StringEnum>] 
 type FileReaderTypes =

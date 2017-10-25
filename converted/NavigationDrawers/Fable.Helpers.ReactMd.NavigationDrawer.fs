@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type NavigationDrawerProps =
     inherit Props
@@ -74,7 +75,7 @@ type NavigationDrawerProps =
     abstract persistentIconClassName: string option with get, set
 
 type NavigationDrawerComponent =
-    inherit React.ComponentClass<INavigationDrawerProp>
+    inherit React.ComponentClass<NavigationDrawerProps>
     abstract DrawerTypes: obj with get, set
     abstract getCurrentMedia: ?props: obj -> obj
 

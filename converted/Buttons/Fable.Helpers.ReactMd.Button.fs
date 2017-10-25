@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 [<StringEnum>] 
 type ButtonTypes =
@@ -50,7 +51,7 @@ type ButtonProps =
     abstract fixedPosition: FixedPositions option with get, set
 
 type ButtonComponent =
-    inherit React.ComponentClass<IButtonProp>
+    inherit React.ComponentClass<ButtonProps>
     abstract createInk: ?pageX: float * ?pageY: float -> unit
     abstract focus: unit -> unit
     abstract getComposedComponent: unit -> TooltippedComponent

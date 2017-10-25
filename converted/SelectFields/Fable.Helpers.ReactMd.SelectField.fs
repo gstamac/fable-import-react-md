@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type SharedSelectFieldProps =
     inherit BaseMenuProps
@@ -58,7 +59,7 @@ type SelectFieldProps =
     abstract iconClassName: string option with get, set
 
 type SelectFieldComponent =
-    inherit React.ComponentClass<ISelectFieldProp>
+    inherit React.ComponentClass<SelectFieldProps>
     abstract Positions: obj with get, set
     abstract VerticalAnchors: obj with get, set
     abstract HorizontalAnchors: obj with get, set

@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 [<StringEnum>] 
 type TextFieldTypes =
@@ -68,7 +69,7 @@ type TextFieldProps =
     abstract adjustMinWidth: bool option with get, set
 
 type TextFieldComponent =
-    inherit React.ComponentClass<ITextFieldProp>
+    inherit React.ComponentClass<TextFieldProps>
     abstract focus: unit -> unit
     abstract getField: unit -> U2<React.ReactHTMLElement, obj>
 

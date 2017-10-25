@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type ReadAs =
     (string -> File -> FileReader -> unit)
@@ -24,7 +25,7 @@ type FileUploadProps =
     abstract onProgress: (File -> float -> React.FormEvent -> unit) option with get, set
 
 type FileUploadComponent =
-    inherit React.ComponentClass<IFileUploadProp>
+    inherit React.ComponentClass<FileUploadProps>
     abstract abort: file: U2<string, File> -> unit
 
 type IFileUploadProp = inherit Fable.Helpers.React.Props.IHTMLProp

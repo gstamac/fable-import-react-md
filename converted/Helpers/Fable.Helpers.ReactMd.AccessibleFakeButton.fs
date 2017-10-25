@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type AccessibleFakeButtonProps =
     [<Emit("$0[$1]{{=$2}}")>] abstract Item: key: string -> obj with get, set
@@ -20,7 +21,7 @@ type AccessibleFakeButtonProps =
     abstract children: React.ReactNode option with get, set
 
 type AccessibleFakeButtonComponent =
-    inherit React.ComponentClass<IAccessibleFakeButtonProp>
+    inherit React.ComponentClass<AccessibleFakeButtonProps>
     abstract focus: (unit -> unit) with get, set
     abstract blur: (unit -> unit) with get, set
 

@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type DropdownMenuColumnProps =
     inherit DropdownMenuProps
@@ -17,7 +18,7 @@ type DropdownMenuColumnProps =
     abstract tooltipPosition: Positions option with get, set
 
 type DropdownMenuColumnComponent =
-    inherit React.ComponentClass<IDropdownMenuColumnProp>
+    inherit React.ComponentClass<DropdownMenuColumnProps>
     abstract Positions: obj with get, set
     abstract VerticalAnchors: obj with get, set
     abstract HorizontalAnchors: obj with get, set

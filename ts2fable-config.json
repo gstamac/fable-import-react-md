@@ -1,5 +1,23 @@
 {
+    "tsLibRoot": "node_modules/react-md/lib",
+    "fsprojName": "Fable.Import.ReactMd",
+    "files": [
+        { "-filename": "node_modules/react-md/lib/Autocompletes/Autocomplete.d.ts" },
+        { "-filename": "node_modules/react-md/lib/Avatars/Avatar.d.ts" },
+        { "-filename": "node_modules/react-md/lib/Buttons/Button.d.ts" },
+        { "-filename": "node_modules/react-md/lib/Drawers/Drawer.d.ts" },
+        { "-include": "node_modules/react-md/lib/Helpers/**/*.d.ts", "exclude": "^.*index\\.d\\.ts$" },
+        { "-include": "node_modules/react-md/lib/Progress/**/*.d.ts", "exclude": "^.*index\\.d\\.ts$" },
+        { "include": "node_modules/react-md/lib/**/*.d.ts", "exclude": "^.*index\\.d\\.ts$" }
+    ],
+    "skipImports": false,
+
+
+
     "importNamespace": "Fable.Helpers.ReactMd",
+    "extraOpens": [
+        "open Fable.Import.ReactMd"
+    ],
     "skipAllowNullLiteral": true,
     "createReactHelpersFor": "react-md",
     "mappedTypes": {

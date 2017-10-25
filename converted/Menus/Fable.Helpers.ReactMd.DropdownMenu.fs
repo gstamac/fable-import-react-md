@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type SharedDropdownMenuProps =
     inherit BaseMenuProps
@@ -25,7 +26,7 @@ type DropdownMenuProps =
     abstract children: React.ReactElement option with get, set
 
 type DropdownMenuComponent =
-    inherit React.ComponentClass<IDropdownMenuProp>
+    inherit React.ComponentClass<DropdownMenuProps>
     abstract Positions: LayoverPositions with get, set
     abstract HorizontalAnchors: HorizontalAnchors with get, set
     abstract VerticalAnchors: VerticalAnchors with get, set

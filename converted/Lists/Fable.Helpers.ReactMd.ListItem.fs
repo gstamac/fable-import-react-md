@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type BaseListItemProps =
     abstract tileStyle: React.CSSProperties option with get, set
@@ -60,7 +61,7 @@ type ListItemProps =
     abstract expanderIconClassName: string option with get, set
 
 type ListItemComponent =
-    inherit React.ComponentClass<IListItemProp>
+    inherit React.ComponentClass<ListItemProps>
     abstract focus: unit -> unit
     abstract blur: unit -> unit
 

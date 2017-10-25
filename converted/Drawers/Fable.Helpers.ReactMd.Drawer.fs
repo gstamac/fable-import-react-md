@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 [<StringEnum>] 
 type MobileDrawerType =
@@ -60,7 +61,7 @@ type DrawerProps =
     abstract onVisibilityToggle: (bool -> React.MouseEvent -> unit) option with get, set
 
 type DrawerComponent =
-    inherit React.ComponentClass<IDrawerProp>
+    inherit React.ComponentClass<DrawerProps>
     abstract DrawerTypes: obj with get, set
     abstract getCurrentMedia: ?props: obj -> obj
     abstract matchesMedia: min: float * ?max: float -> bool

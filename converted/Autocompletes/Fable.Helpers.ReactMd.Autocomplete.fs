@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 [<StringEnum>] 
 type OnOffType =
@@ -51,7 +52,7 @@ type AutocompleteProps =
     abstract simplifiedMenu: bool option with get, set
 
 type AutocompleteComponent =
-    inherit React.ComponentClass<IAutocompleteProp>
+    inherit React.ComponentClass<AutocompleteProps>
     abstract Positions: obj with get, set
     abstract VerticalAnchors: obj with get, set
     abstract HorizontalAnchors: obj with get, set

@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type BaseMenuProps =
     inherit SharedLayoverProps
@@ -41,7 +42,7 @@ type MenuProps =
     abstract expanderIconChildren: React.ReactNode option with get, set
 
 type MenuComponent =
-    inherit React.ComponentClass<IMenuProp>
+    inherit React.ComponentClass<MenuProps>
     abstract Positions: LayoverPositions with get, set
     abstract HorizontalAnchors: HorizontalAnchors with get, set
     abstract VerticalAnchors: VerticalAnchors with get, set

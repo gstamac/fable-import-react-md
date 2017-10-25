@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type SelectFieldColumnProps =
     inherit SharedSelectFieldProps
@@ -20,7 +21,7 @@ type SelectFieldColumnProps =
     abstract wrapperClassName: string option with get, set
 
 type SelectFieldColumnComponent =
-    inherit React.ComponentClass<ISelectFieldColumnProp>
+    inherit React.ComponentClass<SelectFieldColumnProps>
     abstract Positions: obj with get, set
     abstract VerticalAnchors: obj with get, set
     abstract HorizontalAnchors: obj with get, set

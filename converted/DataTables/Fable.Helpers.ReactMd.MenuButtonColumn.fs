@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type MenuButtonColumnProps =
     inherit MenuButtonProps
@@ -17,7 +18,7 @@ type MenuButtonColumnProps =
     abstract tooltipPosition: Positions option with get, set
 
 type MenuButtonColumnComponent =
-    inherit React.ComponentClass<IMenuButtonColumnProp>
+    inherit React.ComponentClass<MenuButtonColumnProps>
     abstract Positions: obj with get, set
     abstract VerticalAnchors: obj with get, set
     abstract HorizontalAnchors: obj with get, set

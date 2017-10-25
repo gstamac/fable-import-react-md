@@ -7,6 +7,7 @@ open Fable.Import
 open Fable.Import.JS
 open Fable.Core.JsInterop
 open Fable.Import.Browser
+open Fable.Import.ReactMd
 
 type toggleQueryFn =
     (unit -> string)
@@ -66,7 +67,7 @@ type LayoverProps =
     abstract simplified: bool option with get, set
 
 type LayoverComponent =
-    inherit React.ComponentClass<ILayoverProp>
+    inherit React.ComponentClass<LayoverProps>
     abstract Positions: obj with get, set
     abstract VerticalAnchors: obj with get, set
     abstract HorizontalAnchors: obj with get, set
